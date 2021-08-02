@@ -8,13 +8,13 @@
 import Foundation
 
 class BookSearchInteractor: BookSearchInteractorProtocol {
-    var presenter: BookSearchPresenter?
+    var presenter: BookSearchPresenterProtocol?
     func getBooks() {
         
     }
 }
 
 protocol BookSearchInteractorProtocol {
-    var presenter: BookSearchPresenter? {get set}
+    var presenter: BookSearchPresenterProtocol? {get set}
     func getBooks()
 }

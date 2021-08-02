@@ -11,7 +11,7 @@
 		ABB3599826B7E41C00D40F6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3599726B7E41C00D40F6A /* SceneDelegate.swift */; };
 		ABB3599F26B7E41E00D40F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB3599E26B7E41E00D40F6A /* Assets.xcassets */; };
 		ABB359A226B7E41E00D40F6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB359A026B7E41E00D40F6A /* LaunchScreen.storyboard */; };
-		ABB359AF26B7E7E500D40F6A /* BookSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359AE26B7E7E500D40F6A /* BookSearchController.swift */; };
+		ABB359AF26B7E7E500D40F6A /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359AE26B7E7E500D40F6A /* BookSearchViewController.swift */; };
 		ABB359C226B807B000D40F6A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C126B807B000D40F6A /* Book.swift */; };
 		ABB359C526B80D9400D40F6A /* BookSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C426B80D9400D40F6A /* BookSearchRouter.swift */; };
 		ABB359C726B80F4300D40F6A /* BookSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C626B80F4300D40F6A /* BookSearchPresenter.swift */; };
@@ -26,7 +26,7 @@
 		ABB3599E26B7E41E00D40F6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB359A126B7E41E00D40F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB359A326B7E41E00D40F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABB359AE26B7E7E500D40F6A /* BookSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchController.swift; sourceTree = "<group>"; };
+		ABB359AE26B7E7E500D40F6A /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
 		ABB359C126B807B000D40F6A /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		ABB359C426B80D9400D40F6A /* BookSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRouter.swift; sourceTree = "<group>"; };
 		ABB359C626B80F4300D40F6A /* BookSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchPresenter.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		ABB359B426B7FDE800D40F6A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ABB359AE26B7E7E500D40F6A /* BookSearchController.swift */,
+				ABB359AE26B7E7E500D40F6A /* BookSearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				ABB359C226B807B000D40F6A /* Book.swift in Sources */,
 				ABB359C526B80D9400D40F6A /* BookSearchRouter.swift in Sources */,
 				ABB3599626B7E41C00D40F6A /* AppDelegate.swift in Sources */,
-				ABB359AF26B7E7E500D40F6A /* BookSearchController.swift in Sources */,
+				ABB359AF26B7E7E500D40F6A /* BookSearchViewController.swift in Sources */,
 				ABB3599826B7E41C00D40F6A /* SceneDelegate.swift in Sources */,
 				ABB359CB26B8104200D40F6A /* BookSearchInteractor.swift in Sources */,
 			);
