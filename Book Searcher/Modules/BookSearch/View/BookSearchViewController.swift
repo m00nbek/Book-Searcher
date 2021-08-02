@@ -87,7 +87,9 @@ extension BookSearchViewController: UITableViewDataSource, UITableViewDelegate {
 extension BookSearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // setting presenter's variable
-        presenter?.searchText = searchText
+        if searchText != "" {
+            presenter?.searchText = searchText
+        }
     }
 }
 // MARK: - Protocol

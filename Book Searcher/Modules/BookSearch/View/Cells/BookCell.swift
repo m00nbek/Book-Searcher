@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BookCell: UITableViewCell {
 
@@ -23,11 +24,15 @@ class BookCell: UITableViewCell {
     // MARK: - Properties
     var book: Book? {
         didSet {
-            // update cell data
-            bookTitle.text = book?.title
-            // todo - get & show all the authors
-            if let author = book?.authors?[0] {
-                bookAuthor.text = author
+            DispatchQueue.main.async {
+                // update cell data
+                self.bookTitle.text = self.book?.title
+                // todo - get & show all the authors
+                if let author = self.book?.authors?[0], let thumbnailLink = self.book?.imageLinks?.thumbnail {
+                    self.bookAuthor.text = author
+                    let url = URL(string: thumbnailLink)
+                    self.thumbnailImageView.sd_setImage(with: url, completed: nil)
+                }
             }
         }
     }
