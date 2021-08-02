@@ -79,6 +79,9 @@ extension BookSearchViewController: UITableViewDataSource, UITableViewDelegate {
         cell?.book = books[indexPath.row]
         return cell ?? UITableViewCell()
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 // MARK: - UISearchBarDelegate
 extension BookSearchViewController: UISearchBarDelegate {

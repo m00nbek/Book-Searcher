@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47DA414D1C22D966E7F0792A /* Pods_Book_Searcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96474BFD4DAF306043287F15 /* Pods_Book_Searcher.framework */; };
 		ABB3599626B7E41C00D40F6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3599526B7E41C00D40F6A /* AppDelegate.swift */; };
 		ABB3599826B7E41C00D40F6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3599726B7E41C00D40F6A /* SceneDelegate.swift */; };
 		ABB3599F26B7E41E00D40F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB3599E26B7E41E00D40F6A /* Assets.xcassets */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3954EAC5779341F8BC8A9A8C /* Pods-Book Searcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book Searcher.release.xcconfig"; path = "Target Support Files/Pods-Book Searcher/Pods-Book Searcher.release.xcconfig"; sourceTree = "<group>"; };
+		78C1168D102E7DFE0933258E /* Pods-Book Searcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book Searcher.debug.xcconfig"; path = "Target Support Files/Pods-Book Searcher/Pods-Book Searcher.debug.xcconfig"; sourceTree = "<group>"; };
+		96474BFD4DAF306043287F15 /* Pods_Book_Searcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_Searcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB3599226B7E41C00D40F6A /* Book Searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB3599526B7E41C00D40F6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB3599726B7E41C00D40F6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47DA414D1C22D966E7F0792A /* Pods_Book_Searcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				ABB3599426B7E41C00D40F6A /* Book Searcher */,
 				ABB3599326B7E41C00D40F6A /* Products */,
+				CCB0BA7F3BF4E3BC21DC1300 /* Pods */,
+				F806303F3AB01D90D38D1173 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +164,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		CCB0BA7F3BF4E3BC21DC1300 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78C1168D102E7DFE0933258E /* Pods-Book Searcher.debug.xcconfig */,
+				3954EAC5779341F8BC8A9A8C /* Pods-Book Searcher.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F806303F3AB01D90D38D1173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96474BFD4DAF306043287F15 /* Pods_Book_Searcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB359A626B7E41E00D40F6A /* Build configuration list for PBXNativeTarget "Book Searcher" */;
 			buildPhases = (
+				93970C9DD7509C2111AE48FC /* [CP] Check Pods Manifest.lock */,
 				ABB3598E26B7E41C00D40F6A /* Sources */,
 				ABB3598F26B7E41C00D40F6A /* Frameworks */,
 				ABB3599026B7E41C00D40F6A /* Resources */,
+				26352FD324A39205B1C9C02F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +247,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26352FD324A39205B1C9C02F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Book Searcher/Pods-Book Searcher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Book Searcher/Pods-Book Searcher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Book Searcher/Pods-Book Searcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93970C9DD7509C2111AE48FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Book Searcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABB3598E26B7E41C00D40F6A /* Sources */ = {
@@ -371,6 +440,7 @@
 		};
 		ABB359A726B7E41E00D40F6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C1168D102E7DFE0933258E /* Pods-Book Searcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +460,7 @@
 		};
 		ABB359A826B7E41E00D40F6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3954EAC5779341F8BC8A9A8C /* Pods-Book Searcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
