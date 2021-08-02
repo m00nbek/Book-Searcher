@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		ABB3599626B7E41C00D40F6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3599526B7E41C00D40F6A /* AppDelegate.swift */; };
 		ABB3599826B7E41C00D40F6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3599726B7E41C00D40F6A /* SceneDelegate.swift */; };
-		ABB3599A26B7E41C00D40F6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3599926B7E41C00D40F6A /* ViewController.swift */; };
-		ABB3599D26B7E41C00D40F6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB3599B26B7E41C00D40F6A /* Main.storyboard */; };
 		ABB3599F26B7E41E00D40F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB3599E26B7E41E00D40F6A /* Assets.xcassets */; };
 		ABB359A226B7E41E00D40F6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB359A026B7E41E00D40F6A /* LaunchScreen.storyboard */; };
+		ABB359AF26B7E7E500D40F6A /* BookSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359AE26B7E7E500D40F6A /* BookSearchController.swift */; };
+		ABB359C226B807B000D40F6A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C126B807B000D40F6A /* Book.swift */; };
+		ABB359C526B80D9400D40F6A /* BookSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C426B80D9400D40F6A /* BookSearchRouter.swift */; };
+		ABB359C726B80F4300D40F6A /* BookSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C626B80F4300D40F6A /* BookSearchPresenter.swift */; };
+		ABB359C926B80F6100D40F6A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C826B80F6100D40F6A /* Protocols.swift */; };
+		ABB359CB26B8104200D40F6A /* BookSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ABB3599226B7E41C00D40F6A /* Book Searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB3599526B7E41C00D40F6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB3599726B7E41C00D40F6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABB3599926B7E41C00D40F6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ABB3599C26B7E41C00D40F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABB3599E26B7E41E00D40F6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABB359A126B7E41E00D40F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABB359A326B7E41E00D40F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB359AE26B7E7E500D40F6A /* BookSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchController.swift; sourceTree = "<group>"; };
+		ABB359C126B807B000D40F6A /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		ABB359C426B80D9400D40F6A /* BookSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRouter.swift; sourceTree = "<group>"; };
+		ABB359C626B80F4300D40F6A /* BookSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchPresenter.swift; sourceTree = "<group>"; };
+		ABB359C826B80F6100D40F6A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,83 @@
 		ABB3599426B7E41C00D40F6A /* Book Searcher */ = {
 			isa = PBXGroup;
 			children = (
-				ABB3599526B7E41C00D40F6A /* AppDelegate.swift */,
-				ABB3599726B7E41C00D40F6A /* SceneDelegate.swift */,
-				ABB3599926B7E41C00D40F6A /* ViewController.swift */,
-				ABB3599B26B7E41C00D40F6A /* Main.storyboard */,
+				ABB359AB26B7E7B200D40F6A /* Modules */,
+				ABB359A926B7E62700D40F6A /* Supporting files */,
 				ABB3599E26B7E41E00D40F6A /* Assets.xcassets */,
-				ABB359A026B7E41E00D40F6A /* LaunchScreen.storyboard */,
 				ABB359A326B7E41E00D40F6A /* Info.plist */,
 			);
 			path = "Book Searcher";
+			sourceTree = "<group>";
+		};
+		ABB359A926B7E62700D40F6A /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				ABB3599526B7E41C00D40F6A /* AppDelegate.swift */,
+				ABB3599726B7E41C00D40F6A /* SceneDelegate.swift */,
+				ABB359A026B7E41E00D40F6A /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		ABB359AB26B7E7B200D40F6A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359B026B7F46700D40F6A /* BookSearch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ABB359B026B7F46700D40F6A /* BookSearch */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359B426B7FDE800D40F6A /* View */,
+				ABB359C326B80D1100D40F6A /* Interactor */,
+				ABB359B626B7FDF500D40F6A /* Presenter */,
+				ABB359B726B7FDFE00D40F6A /* Entity */,
+				ABB359B826B7FE0700D40F6A /* Router */,
+				ABB359C826B80F6100D40F6A /* Protocols.swift */,
+			);
+			path = BookSearch;
+			sourceTree = "<group>";
+		};
+		ABB359B426B7FDE800D40F6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359AE26B7E7E500D40F6A /* BookSearchController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABB359B626B7FDF500D40F6A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359C626B80F4300D40F6A /* BookSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ABB359B726B7FDFE00D40F6A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359C126B807B000D40F6A /* Book.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		ABB359B826B7FE0700D40F6A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359C426B80D9400D40F6A /* BookSearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ABB359C326B80D1100D40F6A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +202,6 @@
 			files = (
 				ABB359A226B7E41E00D40F6A /* LaunchScreen.storyboard in Resources */,
 				ABB3599F26B7E41E00D40F6A /* Assets.xcassets in Resources */,
-				ABB3599D26B7E41C00D40F6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +212,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB3599A26B7E41C00D40F6A /* ViewController.swift in Sources */,
+				ABB359C726B80F4300D40F6A /* BookSearchPresenter.swift in Sources */,
+				ABB359C926B80F6100D40F6A /* Protocols.swift in Sources */,
+				ABB359C226B807B000D40F6A /* Book.swift in Sources */,
+				ABB359C526B80D9400D40F6A /* BookSearchRouter.swift in Sources */,
 				ABB3599626B7E41C00D40F6A /* AppDelegate.swift in Sources */,
+				ABB359AF26B7E7E500D40F6A /* BookSearchController.swift in Sources */,
 				ABB3599826B7E41C00D40F6A /* SceneDelegate.swift in Sources */,
+				ABB359CB26B8104200D40F6A /* BookSearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ABB3599B26B7E41C00D40F6A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ABB3599C26B7E41C00D40F6A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ABB359A026B7E41E00D40F6A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
