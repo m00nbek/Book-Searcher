@@ -39,16 +39,18 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
     func update(with books: [Book]) {
         DispatchQueue.main.async {
             self.books = books
-            print(books)
             self.tableView.reloadData()
         }
     }
     func update(with error: String) {
+        // todo - handle error
         print(error)
     }
     // MARK: - Functions
     private func configureUI() {
         view.backgroundColor = .white
+        // register BookCell
+        tableView.register(BookCell.self, forCellReuseIdentifier: Constants.bookCellIdentifier)
         // searchBar constraints
         searchBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.addSubview(searchBar)
@@ -66,12 +68,16 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
 }
 // MARK: - UITableViewDataSource/Delegate
 extension BookSearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.bookCellIdentifier, for: indexPath) as? BookCell
+        cell?.book = books[indexPath.row]
+        return cell ?? UITableViewCell()
     }
 }
 // MARK: - UISearchBarDelegate

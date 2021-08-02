@@ -9,4 +9,5 @@ import Foundation
 
 class Constants {
     static let searchUrl = "https://www.googleapis.com/books/v1/volumes?q="
+    static let bookCellIdentifier = "BookCell"
 }

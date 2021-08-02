@@ -18,6 +18,7 @@
 		ABB359CB26B8104200D40F6A /* BookSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */; };
 		ABB359CE26B81DA000D40F6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359CD26B81DA000D40F6A /* Constants.swift */; };
 		ABB359D026B821EC00D40F6A /* BookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359CF26B821EC00D40F6A /* BookResponse.swift */; };
+		ABB359D326B84C4B00D40F6A /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359D226B84C4B00D40F6A /* BookCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchInteractor.swift; sourceTree = "<group>"; };
 		ABB359CD26B81DA000D40F6A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ABB359CF26B821EC00D40F6A /* BookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponse.swift; sourceTree = "<group>"; };
+		ABB359D226B84C4B00D40F6A /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		ABB359B426B7FDE800D40F6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABB359D126B84C4300D40F6A /* Cells */,
 				ABB359AE26B7E7E500D40F6A /* BookSearchViewController.swift */,
 			);
 			path = View;
@@ -144,6 +147,14 @@
 				ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ABB359D126B84C4300D40F6A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359D226B84C4B00D40F6A /* BookCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				ABB359D026B821EC00D40F6A /* BookResponse.swift in Sources */,
 				ABB359C926B80F6100D40F6A /* Protocols.swift in Sources */,
 				ABB359C526B80D9400D40F6A /* BookSearchRouter.swift in Sources */,
+				ABB359D326B84C4B00D40F6A /* BookCell.swift in Sources */,
 				ABB3599626B7E41C00D40F6A /* AppDelegate.swift in Sources */,
 				ABB359AF26B7E7E500D40F6A /* BookSearchViewController.swift in Sources */,
 				ABB3599826B7E41C00D40F6A /* SceneDelegate.swift in Sources */,

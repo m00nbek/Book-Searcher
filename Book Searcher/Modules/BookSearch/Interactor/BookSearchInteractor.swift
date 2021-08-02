@@ -10,7 +10,8 @@ import Foundation
 class BookSearchInteractor: BookSearchInteractorProtocol {
     var presenter: BookSearchPresenterProtocol?
     func getBooks(for text: String) {
-        guard let url = URL(string: Constants.searchUrl + text) else {
+        let urlString = (Constants.searchUrl + text).replacingOccurrences(of: " ", with: "%20")
+        guard let url = URL(string: urlString) else {
             print("Cannot get url from string")
             return
         }
