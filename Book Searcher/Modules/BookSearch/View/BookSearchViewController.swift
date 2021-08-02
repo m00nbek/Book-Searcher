@@ -39,11 +39,12 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
     func update(with books: [Book]) {
         DispatchQueue.main.async {
             self.books = books
+            print(books)
             self.tableView.reloadData()
         }
     }
     func update(with error: String) {
-        // todo: handle error
+        print(error)
     }
     // MARK: - Functions
     private func configureUI() {
@@ -76,8 +77,8 @@ extension BookSearchViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - UISearchBarDelegate
 extension BookSearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-        //gotta set presenter's variable
+        // setting presenter's variable
+        presenter?.searchText = searchText
     }
 }
 // MARK: - Protocol

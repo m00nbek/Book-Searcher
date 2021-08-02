@@ -22,8 +22,9 @@ class BookSearchInteractor: BookSearchInteractorProtocol {
             do {
                 let decodedData = try JSONDecoder().decode(BookResponse.self, from: data)
                 var books = [Book]()
-                for bookItem in decodedData.items {
-                    books.append(bookItem.volumeInfo)
+                // todo - should fix this force upwrapping
+                for bookItem in decodedData.items! {
+                    books.append(bookItem.volumeInfo!)
                 }
                 self?.presenter?.interactorDidFetchBooks(with: .success(books))
             } catch {

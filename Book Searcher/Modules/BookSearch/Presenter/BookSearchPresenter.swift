@@ -34,6 +34,7 @@ protocol BookSearchPresenterProtocol {
     var router: BookSearchRouterProtocol? {get set}
     var interactor: BookSearchInteractorProtocol? {get set}
     var view: BookSearchViewProtocol? {get set}
+    var searchText: String? {get set}
     
     func interactorDidFetchBooks(with result: Result<[Book], Error>)
 }
