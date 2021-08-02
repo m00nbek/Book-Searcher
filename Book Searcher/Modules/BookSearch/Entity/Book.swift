@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book {
+struct adfa {
     let title: String
     let imageUrl: String
     let author: String

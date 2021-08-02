@@ -16,6 +16,8 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
     }
     // MARK: - Properties
     var presenter: BookSearchPresenterProtocol?
+    
+    var books: [Book] = []
 
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -35,10 +37,13 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
     }()
     // MARK: - Protocol stubs
     func update(with books: [Book]) {
-        
+        DispatchQueue.main.async {
+            self.books = books
+            self.tableView.reloadData()
+        }
     }
     func update(with error: String) {
-        
+        // todo: handle error
     }
     // MARK: - Functions
     private func configureUI() {
@@ -61,15 +66,19 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
 // MARK: - UITableViewDataSource/Delegate
 extension BookSearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return books.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         return UITableViewCell()
     }
 }
 // MARK: - UISearchBarDelegate
 extension BookSearchViewController: UISearchBarDelegate {
-
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        //gotta set presenter's variable
+    }
 }
 // MARK: - Protocol
 protocol BookSearchViewProtocol {
