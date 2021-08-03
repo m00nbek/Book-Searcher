@@ -37,11 +37,20 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
     }()
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.isHidden = true
         tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
+    }()
+    private let searchForBook: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 25)
+        label.text = "Search for book..."
+        label.isHidden = false
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     // MARK: - Protocol stubs
     func update(with books: [Book]) {
@@ -63,9 +72,16 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
         view.addSubview(searchBar)
         NSLayoutConstraint.activate([
             searchBar.heightAnchor.constraint(equalToConstant: 50),
-            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+        ])
+        // searchForBook
+        view.addSubview(searchForBook)
+        NSLayoutConstraint.activate([
+            searchForBook.heightAnchor.constraint(equalToConstant: 50),
+            searchForBook.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            searchForBook.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         // tableView constraints
         view.addSubview(tableView)
@@ -111,8 +127,15 @@ extension BookSearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // checking if searchText is not empty and doesn't contain space
         if !searchText.isEmpty && searchText != " " {
+            // showing tableView
+            tableView.isHidden = false
+            searchForBook.isHidden = true
             // setting presenter's variable
             presenter?.searchText = searchText
+        } else {
+            // showing searchForBook label
+            tableView.isHidden = true
+            searchForBook.isHidden = false
         }
     }
 }
