@@ -34,7 +34,7 @@ class BookSearchInteractor: BookSearchInteractorProtocol {
         }.resume()
     }
 }
-
+// MARK: - Protocol
 protocol BookSearchInteractorProtocol {
     var presenter: BookSearchPresenterProtocol? {get set}
     func getBooks(for text: String)

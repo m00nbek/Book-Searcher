@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,11 +15,14 @@
 		ABB359AF26B7E7E500D40F6A /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359AE26B7E7E500D40F6A /* BookSearchViewController.swift */; };
 		ABB359C526B80D9400D40F6A /* BookSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C426B80D9400D40F6A /* BookSearchRouter.swift */; };
 		ABB359C726B80F4300D40F6A /* BookSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C626B80F4300D40F6A /* BookSearchPresenter.swift */; };
-		ABB359C926B80F6100D40F6A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359C826B80F6100D40F6A /* Protocols.swift */; };
 		ABB359CB26B8104200D40F6A /* BookSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */; };
 		ABB359CE26B81DA000D40F6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359CD26B81DA000D40F6A /* Constants.swift */; };
 		ABB359D026B821EC00D40F6A /* BookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359CF26B821EC00D40F6A /* BookResponse.swift */; };
 		ABB359D326B84C4B00D40F6A /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359D226B84C4B00D40F6A /* BookCell.swift */; };
+		ABB359DB26B8609E00D40F6A /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359DA26B8609E00D40F6A /* BookDetailViewController.swift */; };
+		ABB359DD26B860E300D40F6A /* BookDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359DC26B860E300D40F6A /* BookDetailInteractor.swift */; };
+		ABB359DF26B860EF00D40F6A /* BookDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359DE26B860EF00D40F6A /* BookDetailPresenter.swift */; };
+		ABB359E126B8611300D40F6A /* BookDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB359E026B8611300D40F6A /* BookDetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +38,14 @@
 		ABB359AE26B7E7E500D40F6A /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
 		ABB359C426B80D9400D40F6A /* BookSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchRouter.swift; sourceTree = "<group>"; };
 		ABB359C626B80F4300D40F6A /* BookSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchPresenter.swift; sourceTree = "<group>"; };
-		ABB359C826B80F6100D40F6A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		ABB359CA26B8104200D40F6A /* BookSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchInteractor.swift; sourceTree = "<group>"; };
 		ABB359CD26B81DA000D40F6A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ABB359CF26B821EC00D40F6A /* BookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponse.swift; sourceTree = "<group>"; };
 		ABB359D226B84C4B00D40F6A /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		ABB359DA26B8609E00D40F6A /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		ABB359DC26B860E300D40F6A /* BookDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailInteractor.swift; sourceTree = "<group>"; };
+		ABB359DE26B860EF00D40F6A /* BookDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailPresenter.swift; sourceTree = "<group>"; };
+		ABB359E026B8611300D40F6A /* BookDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 			children = (
 				ABB359AB26B7E7B200D40F6A /* Modules */,
 				ABB359A926B7E62700D40F6A /* Supporting files */,
+				ABB359CD26B81DA000D40F6A /* Constants.swift */,
 				ABB3599E26B7E41E00D40F6A /* Assets.xcassets */,
 				ABB359A326B7E41E00D40F6A /* Info.plist */,
 			);
@@ -97,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB359B026B7F46700D40F6A /* BookSearch */,
+				ABB359D426B85F6E00D40F6A /* BookDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -109,8 +117,6 @@
 				ABB359B626B7FDF500D40F6A /* Presenter */,
 				ABB359B726B7FDFE00D40F6A /* Entity */,
 				ABB359B826B7FE0700D40F6A /* Router */,
-				ABB359C826B80F6100D40F6A /* Protocols.swift */,
-				ABB359CD26B81DA000D40F6A /* Constants.swift */,
 			);
 			path = BookSearch;
 			sourceTree = "<group>";
@@ -164,13 +170,63 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		ABB359D426B85F6E00D40F6A /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359D926B8606800D40F6A /* View */,
+				ABB359D826B8606200D40F6A /* Interactor */,
+				ABB359D726B8605C00D40F6A /* Presenter */,
+				ABB359D626B8603900D40F6A /* Entity */,
+				ABB359D526B8602B00D40F6A /* Router */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		ABB359D526B8602B00D40F6A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359E026B8611300D40F6A /* BookDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ABB359D626B8603900D40F6A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		ABB359D726B8605C00D40F6A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359DE26B860EF00D40F6A /* BookDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ABB359D826B8606200D40F6A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359DC26B860E300D40F6A /* BookDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ABB359D926B8606800D40F6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABB359DA26B8609E00D40F6A /* BookDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CCB0BA7F3BF4E3BC21DC1300 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				78C1168D102E7DFE0933258E /* Pods-Book Searcher.debug.xcconfig */,
 				3954EAC5779341F8BC8A9A8C /* Pods-Book Searcher.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -297,13 +353,16 @@
 			files = (
 				ABB359C726B80F4300D40F6A /* BookSearchPresenter.swift in Sources */,
 				ABB359D026B821EC00D40F6A /* BookResponse.swift in Sources */,
-				ABB359C926B80F6100D40F6A /* Protocols.swift in Sources */,
+				ABB359DF26B860EF00D40F6A /* BookDetailPresenter.swift in Sources */,
 				ABB359C526B80D9400D40F6A /* BookSearchRouter.swift in Sources */,
+				ABB359DB26B8609E00D40F6A /* BookDetailViewController.swift in Sources */,
 				ABB359D326B84C4B00D40F6A /* BookCell.swift in Sources */,
 				ABB3599626B7E41C00D40F6A /* AppDelegate.swift in Sources */,
+				ABB359DD26B860E300D40F6A /* BookDetailInteractor.swift in Sources */,
 				ABB359AF26B7E7E500D40F6A /* BookSearchViewController.swift in Sources */,
 				ABB3599826B7E41C00D40F6A /* SceneDelegate.swift in Sources */,
 				ABB359CB26B8104200D40F6A /* BookSearchInteractor.swift in Sources */,
+				ABB359E126B8611300D40F6A /* BookDetailRouter.swift in Sources */,
 				ABB359CE26B81DA000D40F6A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

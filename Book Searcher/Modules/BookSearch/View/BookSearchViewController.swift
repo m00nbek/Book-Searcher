@@ -14,6 +14,14 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
         super.viewDidLoad()
         configureUI()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
     // MARK: - Properties
     var presenter: BookSearchPresenterProtocol?
     
@@ -81,6 +89,7 @@ extension BookSearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.showBookDetailScreen(with: books[indexPath.row], navigationController: navigationController!)
     }
 }
 // MARK: - UISearchBarDelegate

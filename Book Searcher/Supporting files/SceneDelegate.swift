@@ -15,10 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let bookSearchRouter = BookSearchRouter.start()
-        let initialVC = bookSearchRouter.entry
+        guard let initialVC = bookSearchRouter.entry else {
+            // todo - handle error
+            return
+        }
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = initialVC
+        window?.rootViewController = UINavigationController(rootViewController: initialVC)
         window?.makeKeyAndVisible()
     }
 

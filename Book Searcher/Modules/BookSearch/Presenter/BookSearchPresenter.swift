@@ -5,7 +5,7 @@
 //  Created by Oybek on 8/2/21.
 //
 
-import Foundation
+import UIKit
 
 enum FetchError: Error {
     case failed
@@ -28,8 +28,11 @@ class BookSearchPresenter: BookSearchPresenterProtocol {
             view?.update(with: "Something went wrong")
         }
     }
+    func showBookDetailScreen(with book: Book, navigationController: UINavigationController) {
+        router?.pushToBookDetailScreen(with: book, navigationController: navigationController)
+    }
 }
-
+// MARK: - Protocols
 protocol BookSearchPresenterProtocol {
     var router: BookSearchRouterProtocol? {get set}
     var interactor: BookSearchInteractorProtocol? {get set}
@@ -37,5 +40,6 @@ protocol BookSearchPresenterProtocol {
     var searchText: String? {get set}
     
     func interactorDidFetchBooks(with result: Result<[Book], Error>)
+    func showBookDetailScreen(with book: Book, navigationController: UINavigationController)
 }
 

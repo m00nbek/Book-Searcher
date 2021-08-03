@@ -8,6 +8,7 @@
 import UIKit
 
 class BookSearchRouter: BookSearchRouterProtocol {
+    
     var entry: EntryPoint?
     static func start() -> BookSearchRouterProtocol {
         let router = BookSearchRouter()
@@ -27,11 +28,16 @@ class BookSearchRouter: BookSearchRouterProtocol {
         
         return router
     }
+    func pushToBookDetailScreen(with book: Book, navigationController: UINavigationController) {
+        let bookDetailScreen = BookDetailRouter.createBookDetail(with: book)
+        navigationController.pushViewController(bookDetailScreen, animated: true)
+    }
 }
 // MARK: - Protocol
 typealias EntryPoint = BookSearchViewProtocol & UIViewController
 protocol BookSearchRouterProtocol {
     var entry: EntryPoint? {get}
     static func start() -> BookSearchRouterProtocol
+    func pushToBookDetailScreen(with book: Book, navigationController: UINavigationController)
 }
 
