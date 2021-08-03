@@ -60,17 +60,21 @@ class BookSearchViewController: UIViewController, BookSearchViewProtocol {
         // register BookCell
         tableView.register(BookCell.self, forCellReuseIdentifier: Constants.bookCellIdentifier)
         // searchBar constraints
-        searchBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.addSubview(searchBar)
-        searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
-        searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            searchBar.heightAnchor.constraint(equalToConstant: 50),
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+        ])
         // tableView constraints
         view.addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
     
 }
@@ -94,9 +98,20 @@ extension BookSearchViewController: UITableViewDataSource, UITableViewDelegate {
 }
 // MARK: - UISearchBarDelegate
 extension BookSearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        // checking if searchText is not empty and doesn't contain space
+        if let searchText = searchBar.text {
+            if searchText != " " {
+                // setting presenter's variable
+                presenter?.searchText = searchText
+            }
+        }
+    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // setting presenter's variable
-        if searchText != "" {
+        // checking if searchText is not empty and doesn't contain space
+        if !searchText.isEmpty && searchText != " " {
+            // setting presenter's variable
             presenter?.searchText = searchText
         }
     }

@@ -14,8 +14,6 @@ class BookDetailRouter: BookDetailRouterProtocol {
         var presenter: BookDetailPresenterProtocol = BookDetailPresenter()
         var interactor: BookDetailInteractorProtocol = BookDetailInteractor()
         
-        presenter.book = book
-        
         view.presenter = presenter
         
         interactor.presenter = presenter
@@ -24,6 +22,7 @@ class BookDetailRouter: BookDetailRouterProtocol {
         presenter.view = view
         presenter.router = router
                 
+        presenter.book = book
         return view
     }
 }

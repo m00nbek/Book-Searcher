@@ -27,7 +27,6 @@ class BookCell: UITableViewCell {
             DispatchQueue.main.async {
                 // update cell data
                 self.bookTitle.text = self.book?.title
-                // todo - get & show all the authors
                 if let author = self.book?.authors?[0], let thumbnailLink = self.book?.imageLinks?.thumbnail {
                     self.bookAuthor.text = author
                     let url = URL(string: thumbnailLink)
@@ -62,21 +61,24 @@ class BookCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
-    // MARK: - Selectors
-    // MARK: - API
     // MARK: - Functions
     private func configureUI() {
-        thumbnailImageView.widthAnchor.constraint(equalToConstant: frame.width / 4).isActive = true
+        // thumbnailImageView constraints
         addSubview(thumbnailImageView)
-        thumbnailImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        thumbnailImageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        thumbnailImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        
+        NSLayoutConstraint.activate([
+            thumbnailImageView.widthAnchor.constraint(equalToConstant: frame.width / 4),
+            thumbnailImageView.topAnchor.constraint(equalTo: topAnchor),
+            thumbnailImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            thumbnailImageView.leadingAnchor.constraint(equalTo: leadingAnchor)
+        ])
+        // titleStack constrainsts
         addSubview(titleStack)
-        titleStack.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        titleStack.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        titleStack.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor).isActive = true
-        titleStack.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            titleStack.topAnchor.constraint(equalTo: topAnchor),
+            titleStack.bottomAnchor.constraint(equalTo: bottomAnchor),
+            titleStack.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor),
+            titleStack.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
         
     }
 }
